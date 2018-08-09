@@ -1,0 +1,122 @@
+[
+  {
+    "level": 1,
+    "homeZone": { "x": 370, "y": 270, "width": 136, "height": 136 },
+    "blackHoles": [
+      { "x": 100, "y": 250, "radius": 30 },
+      { "x": 650, "y": 350, "radius": 35 }
+    ],
+    "boundingBars": [
+      { "p1x": 250, "p1y": 100, "p2x": 350, "p2y": 150 },
+      { "p1x": 650, "p1y": 500, "p2x": 770, "p2y": 500 }
+    ],
+    "balls": [
+        {"id": 1, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 2, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 3, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 4, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 5, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 6, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 7, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 8, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 9, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 10, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]}
+    ]
+  },
+  {
+    "level": 2,
+    "homeZone": { "x": 370, "y": 270, "width": 136, "height": 136 },
+    "blackHoles": [
+      { "x": 100, "y": 250, "radius": 30 },
+      { "x": 650, "y": 350, "radius": 35 }
+    ],
+    "BoundingBars": [
+      { "p1x": 250, "p1y": 100, "p2x": 350, "p2y": 150 },
+      { "p1x": 650, "p1y": 500, "p2x": 770, "p2y": 500 }
+    ],
+    "balls": [
+        {"id": 1, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 2, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 3, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 4, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 5, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 6, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 7, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 8, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 9, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 10, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]}
+    ]
+  },
+  {
+    "level": 3,
+    "homeZone": { "x": 370, "y": 270, "width": 136, "height": 136 },
+    "blackHoles": [
+      { "x": 100, "y": 250, "radius": 30 },
+      { "x": 650, "y": 350, "radius": 35 }
+    ],
+    "BoundingBars": [
+      { "p1x": 250, "p1y": 100, "p2x": 350, "p2y": 150 },
+      { "p1x": 650, "p1y": 500, "p2x": 770, "p2y": 500 }
+    ],
+    "balls": [
+        {"id": 1, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 2, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 3, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 4, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 5, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 6, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 7, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 8, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 9, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 10, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]}
+    ]
+  },
+  {
+    "level": 4,
+    "homeZone": { "x": 370, "y": 270, "width": 136, "height": 136 },
+    "blackHoles": [
+      { "x": 100, "y": 250, "radius": 30 },
+      { "x": 650, "y": 350, "radius": 35 }
+    ],
+    "BoundingBars": [
+      { "p1x": 250, "p1y": 100, "p2x": 350, "p2y": 150 },
+      { "p1x": 650, "p1y": 500, "p2x": 770, "p2y": 500 }
+    ],
+    "balls": [
+        {"id": 1, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 2, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 3, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 4, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 5, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 6, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 7, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 8, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 9, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 10, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]}
+    ]
+  },
+  {
+    "level": 5,
+    "homeZone": { "x": 370, "y": 270, "width": 136, "height": 136 },
+    "blackHoles": [
+      { "x": 100, "y": 250, "radius": 30 },
+      { "x": 650, "y": 350, "radius": 35 }
+    ],
+    "BoundingBars": [
+      { "p1x": 250, "p1y": 100, "p2x": 350, "p2y": 150 },
+      { "p1x": 650, "p1y": 500, "p2x": 770, "p2y": 500 }
+    ],
+    "balls": [
+        {"id": 1, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 2, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 3, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 4, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 5, "xRandom": [340, 460], "yRandom": [20, 260], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 6, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 7, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 8, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 9, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]},
+        {"id": 10, "xRandom": [340, 460], "yRandom": [340, 580], "vxRandom": [-3, 3], "vyRandom": [-3, 3]}
+    ]
+  }
+]

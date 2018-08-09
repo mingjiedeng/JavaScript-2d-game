@@ -1,0 +1,28 @@
+{
+  "name": "game_lead_me_home",
+  "version": "1.0.0",
+  "description": "A javaScript game rendered on HTML5 canvas.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "build": "webpack --mode production",
+    "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
+    "server": "nodemon app.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "javaScript",
+    "html5",
+    "canvas"
+  ],
+  "author": "Mingjie Deng",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^3.1.1",
+    "mongoose": "^5.2.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
