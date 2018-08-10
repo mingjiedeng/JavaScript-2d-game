@@ -14,7 +14,7 @@ const levelDatas = gameData.levels;
 const captureDistance = 80;
 const controlDistance = 60;
 const ballRadius = 8;
-const ballVelocity = 3;
+const ballVelocity = 4;
 
 let stopMainLoop = null;
 let cursor = { x: -captureDistance * 10, y: -captureDistance * 10 };
@@ -83,7 +83,7 @@ class Game {
       ry = randomNum(balls[i].ry[0], balls[i].ry[1]);
       rVx = randomV(balls[i].rVx[0], balls[i].rVx[1]);
       rVy = randomV(balls[i].rVy[0], balls[i].rVy[1]);
-      emojiSrc = "images/emoji" + ((i % 6) + 1) + ".png";
+      emojiSrc = "images/emoji" + ((i % 5) + 1) + ".png";
       this.balls.push(
         new Ball(this.ctx, rx, ry, rVx, rVy, ballRadius, emojiSrc)
       );
@@ -145,6 +145,11 @@ class Game {
  */
 function drawScene() {
   this.ctx.save();
+
+  //Draw the background
+  let img = new Image();
+  img.src = config.imgSources.gameBg;
+  this.ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
   //Draw the target zone
   this.homeZone.draw();

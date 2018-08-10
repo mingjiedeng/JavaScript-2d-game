@@ -1,5 +1,7 @@
 const config = {
   imgSources: {
+    tilePanelBg: "images/bg1.jpg",
+    gameBg: "images/bg2.jpg",
     starDark: "images/starDark.png",
     starLight: "images/starLight.png",
     levelLock: "images/lock.png",
@@ -178,8 +180,8 @@ class BlackHole extends CircleZone {
     } else if (this.type == "wormhole") {
       img.src = config.imgSources.wormHole;
       //Draw the teleportation target of the wormhole
-      drawCircle(ctx, this.targetX, this.targetY, 15, "stroke", "blue");
-      drawCircle(ctx, this.targetX, this.targetY, 5, "fill", "blue");
+      drawCircle(ctx, this.targetX, this.targetY, 15, "stroke", "yellow");
+      drawCircle(ctx, this.targetX, this.targetY, 5, "fill", "yellow");
     }
 
     //Draw the self-rotating animation
@@ -211,11 +213,11 @@ class BarrierBlock {
     const ctx = this.ctx;
     ctx.save();
 
-    let color = "black";
+    let color = "#000000"; //black
     if (this.type == "decelerate") {
-      color = "#206315"; //green
+      color = "#9bff21"; //green
     } else if (this.type == "accelerate") {
-      color = "#8c0000"; //red
+      color = "#ba1212"; //red
     }
     ctx.strokeStyle = color;
     ctx.lineWidth = this.lineWidth;

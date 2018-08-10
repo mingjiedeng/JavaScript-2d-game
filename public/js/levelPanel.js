@@ -43,6 +43,13 @@ class LevelPanel {
     const tileColor = "blue";
     //Load the images before draw the level tiles
     loadImages(imgSources, function(images) {
+      //Draw the background
+      let img = new Image();
+      img.src = config.imgSources.tilePanelBg;
+      ctx.globalCompositeOperation = "destination-over";
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      ctx.globalCompositeOperation = "source-over";
+
       //Draw level tiles
       for (let i = 1; i < levelStars.length; i++) {
         let tileStatus = levelStars[i - 1] < 2 ? "locked" : "open";
@@ -83,11 +90,18 @@ class LevelPanel {
 function drawInstruction() {
   const ctx = this.ctx;
   drawText(ctx, "", 0, 0, "fill", "45px Arial", "center", "yellow");
-  drawText(ctx, "Instruction", 400, 100);
+  // drawText(ctx, "Instruction", 400, 100);
+  // drawText(ctx, "", 0, 0, "fill", "25px Arial", "left");
+  // drawText(ctx, "1. Choose a level tile below to star the game.", 100, 150);
+  // drawText(ctx, "2. Move cursor to lead all the emoji back home.", 100, 200);
+  // drawText(ctx, "3. Got two stars to unlock next level.", 100, 250);
+
+  drawText(ctx, "Lead Me Home", 400, 100);
   drawText(ctx, "", 0, 0, "fill", "25px Arial", "left");
-  drawText(ctx, "1. Choose a level tile below to star the game.", 100, 150);
-  drawText(ctx, "2. Move cursor to lead all the emoji back home.", 100, 200);
-  drawText(ctx, "3. Got two stars to unlock next level.", 100, 250);
+  drawText(ctx, "Instruction", 100, 150);
+  drawText(ctx, "1. Choose a level tile below to star the game.", 100, 190);
+  drawText(ctx, "2. Move cursor to lead all the emoji back home.", 100, 230);
+  drawText(ctx, "3. Got two stars to unlock next level.", 100, 270);
 }
 
 export { LevelPanel };
