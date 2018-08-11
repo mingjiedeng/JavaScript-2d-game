@@ -21,10 +21,11 @@ let cursor = { x: -captureDistance * 10, y: -captureDistance * 10 };
 let accomplished = true;
 
 class Game {
-  constructor(canvas, user, level) {
+  constructor(canvas, user, level, images) {
     this.canvas = canvas;
     this.ctx = this.canvas.getContext("2d");
     this.user = user;
+    this.images = images;
     this.level = level;
     this.levelData = levelDatas[level - 1];
     let levelData = this.levelData;
@@ -92,10 +93,15 @@ class Game {
     //Bind the event handler
     this.mouseMoveHandler = mouseMove.bind(this);
     this.mouseOutHandler = mouseOut.bind(this);
+    this.touchOrMove = touchOn.bind(this);
+    this.touchEnd = touchOut.bind(this);
     this.backToTile = clickBackToTile.bind(this);
 
-    canvas.addEventListener("mousemove", e => this.mouseMoveHandler(e));
-    canvas.addEventListener("mouseout", e => this.mouseOutHandler(e));
+    canvas.addEventListener("mousemove", this.mouseMoveHandler);
+    canvas.addEventListener("mouseout", this.mouseOutHandler);
+    canvas.addEventListener("touchstart", this.touchOrMove);
+    canvas.addEventListener("touchmove", this.touchOrMove);
+    canvas.addEventListener("touchend", this.touchEnd);
   }
 
   /**
@@ -307,6 +313,7 @@ function ballRebound(ball, bar) {
   let vx = ball.vx;
   let vy = ball.vy;
 
+  //Deal with the acceleration or deceleration
   let bigV = Math.max(Math.abs(vx), Math.abs(vy));
   if (bar.type == "accelerate") {
     const adjustMaxV = ballVelocity * 1.5;
@@ -375,7 +382,12 @@ function levelAccomplished() {
   //Clear the game event listeners, and add an event listener to back to tiles panel
   canvas.removeEventListener("mousemove", this.mouseMoveHandler);
   canvas.removeEventListener("mouseout", this.mouseOutHandler);
+  canvas.removeEventListener("touchstart", this.touchOrMove);
+  canvas.removeEventListener("touchmove", this.touchOrMove);
+  canvas.removeEventListener("touchend", this.touchEnd);
+
   canvas.addEventListener("click", this.backToTile);
+  canvas.addEventListener("touchstart", this.backToTile);
 }
 
 function mouseMove(e) {
@@ -389,10 +401,23 @@ function mouseOut() {
   //window.cancelAnimationFrame(stopMainLoop);
 }
 
+function touchOn(e) {
+  e.preventDefault();
+  cursor.x = e.touches[0].clientX;
+  cursor.y = e.touches[0].clientY;
+}
+
+function touchOut(e) {
+  e.preventDefault();
+  cursor.x = -captureDistance * 10;
+  cursor.y = -captureDistance * 10;
+}
+
 function clickBackToTile() {
   canvas.removeEventListener("click", this.backToTile);
+  canvas.removeEventListener("touchstart", this.backToTile);
 
-  let levelPanel = new LevelPanel(canvas, this.user);
+  let levelPanel = new LevelPanel(canvas, this.user, this.images);
   levelPanel.run();
 }
 
