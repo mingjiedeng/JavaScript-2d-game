@@ -11,9 +11,14 @@
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
+    "game",
     "javaScript",
     "html5",
-    "canvas"
+    "canvas",
+    "vector",
+    "collision",
+    "ECMAScript 6",
+    "es6"
   ],
   "author": "Mingjie Deng",
   "license": "MIT",

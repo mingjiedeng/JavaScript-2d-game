@@ -68,7 +68,7 @@ export default {
     },
     {
       level: 4,
-      homeZone: { x: 200, y: 350, width: 136, height: 136 },
+      homeZone: { x: 200, y: 350, width: 120, height: 120 },
       blackHoles: [
         { type: "blackhole", x: 600, y: 100, radius: 35 },
         {
@@ -92,12 +92,12 @@ export default {
         { rx: [450, 750], ry: [250, 580], rVx: [1, 4], rVy: [1, 4] },
         { rx: [450, 750], ry: [250, 580], rVx: [1, 4], rVy: [1, 4] },
         { rx: [450, 750], ry: [250, 580], rVx: [1, 4], rVy: [1, 4] },
-        { rx: [450, 750], ry: [250, 580], rVx: [1, 4], rVy: [1, 4] }
+        { rx: [20, 250], ry: [20, 180], rVx: [0.5, 3], rVy: [0.5, 3] }
       ]
     },
     {
       level: 5,
-      homeZone: { x: 200, y: 350, width: 136, height: 136 },
+      homeZone: { x: 200, y: 350, width: 120, height: 120 },
       blackHoles: [
         { type: "blackhole", x: 600, y: 100, radius: 35 },
         {
@@ -127,7 +127,7 @@ export default {
     },
     {
       level: 6,
-      homeZone: { x: 400, y: 350, width: 120, height: 120 },
+      homeZone: { x: 400, y: 350, width: 110, height: 110 },
       blackHoles: [
         { type: "blackhole", x: 600, y: 100, radius: 35 },
         { type: "blackhole", x: 130, y: 450, radius: 30 },
