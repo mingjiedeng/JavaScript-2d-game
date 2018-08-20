@@ -1,3 +1,6 @@
+/**
+ * Define the player with user name and level records
+ */
 class User {
   constructor(userName) {
     this.userName = userName;

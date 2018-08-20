@@ -13,11 +13,12 @@ function main() {
     let user, levelPanel, game;
     user = new User("guest");
 
+    //Show the level panel
     levelPanel = new LevelPanel(canvas, user, images);
     levelPanel.run();
   });
 
-  //Show loading before the images finish loading
+  //Show 'loading' on the canvas before the images are ready
   let prompt = "loading...";
   drawText(ctx, prompt, 400, 300, "fill", "25px Arial", "center", "yellow");
 }

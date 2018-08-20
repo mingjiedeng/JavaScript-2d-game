@@ -1,3 +1,7 @@
+/**
+ * This is the game configuration for each level
+ * Can convert to JSON file
+ */
 export default {
   levels: [
     {

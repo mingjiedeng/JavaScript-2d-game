@@ -1,3 +1,10 @@
+/**
+ * LevelPanel, the class defines the level panel which is the entry of the game.
+ *
+ * @author Mingjie Deng <mingjie.dmj@gmail.com>
+ * @version 1.1 (8/19/2018)
+ */
+
 import { LevelTile, drawText } from "./gameLib.js";
 import { Game } from "./game.js";
 
@@ -57,6 +64,9 @@ function drawInstruction() {
   drawText(ctx, "3. Got two stars to unlock next level.", 100, 270);
 }
 
+/**
+ * Draw the tiles on canvas
+ */
 function drawTiles() {
   let ctx = this.ctx;
   let lvStars = this.levelStars;
@@ -82,6 +92,12 @@ function drawTiles() {
   }
 }
 
+/**
+ * The event listener function
+ * Handles the game starting when player clicks or touches a tile
+ *
+ * @param {Object} e the event catched
+ */
 function hitTheTile(e) {
   //Identify the event type is touchstart or click
   let x, y;

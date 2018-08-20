@@ -1,3 +1,13 @@
+/**
+ * The library for the game running
+ *
+ * @author Mingjie Deng <mingjie.dmj@gmail.com>
+ * @version 1.0 (8/19/2018)
+ */
+
+/**
+ * Game properties config
+ */
 const config = {
   imgSources: {
     tilePanelBg: "images/bg1.jpg",
@@ -16,6 +26,12 @@ const config = {
   }
 };
 
+/**
+ * Invoke the callback function after loading all the images in the sources object
+ *
+ * @param {Object} sources the image source with the name and url in this object
+ * @param {Function} callback callback function
+ */
 function loadImages(sources, callback) {
   let imgNum = 0;
   let count = 0;
@@ -36,6 +52,18 @@ function loadImages(sources, callback) {
   }
 }
 
+/**
+ * Draw the text specified on the canvas
+ *
+ * @param {Object} ctx the drawing context on the canvas
+ * @param {String} text the text
+ * @param {Number} x Value of the x axis on canvas
+ * @param {Number} y Value of the y axis on canvas
+ * @param {String} type the type of 'fill' or 'stroke'
+ * @param {String} font the font style likes '45px Arial'
+ * @param {String} textAlign the text align likes 'center'
+ * @param {String} color the font color likes 'yellow'
+ */
 function drawText(
   ctx,
   text,
@@ -130,6 +158,9 @@ class CircleZone {
   }
 }
 
+/**
+ * Define the home zone in the game
+ */
 class HomeZone extends RectZone {
   draw() {
     let img = new Image();
@@ -138,6 +169,9 @@ class HomeZone extends RectZone {
   }
 }
 
+/**
+ * Define the ball(emoji) bouncing in the game
+ */
 class Ball extends CircleZone {
   constructor(ctx, x, y, vx, vy, radius, src, color = "yellow") {
     super(ctx, x, y, radius, color);
@@ -155,6 +189,11 @@ class Ball extends CircleZone {
   }
 }
 
+/**
+ * Define the black hole and the worm hole in the game
+ * Black hole will destroys the ball
+ * Worm hole will transfers the ball
+ */
 class BlackHole extends CircleZone {
   constructor(
     ctx,
@@ -198,6 +237,10 @@ class BlackHole extends CircleZone {
   }
 }
 
+/**
+ * Define the barrier(inner wall) in the game
+ * The wall with the type of these three: 'normal', 'decelerate', 'accelerate'.
+ */
 class BarrierBlock {
   constructor(ctx, beginX, beginY, endX, endY, type = "normal") {
     this.ctx = ctx;
@@ -231,6 +274,10 @@ class BarrierBlock {
   }
 }
 
+/**
+ * Define the level tile with the level number on top
+ * Player can click the tile to enter the game in specified level.
+ */
 class LevelTile extends RectZone {
   constructor(ctx, tileStatus, x, y, level, star, width = 100, height = 80) {
     super(
@@ -286,6 +333,12 @@ class LevelTile extends RectZone {
     ctx.restore();
   }
 
+  /**
+   * Check if the point hits this tile
+   * @param {Number} x The X coordinate of the point to check
+   * @param {Number} y The Y coordinate of the point to check
+   * @return {Boolean} return true if the specified point is inside this tile, otherwise false
+   */
   isInTile(x, y) {
     const ctx = this.ctx;
     ctx.beginPath();
