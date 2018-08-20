@@ -88,7 +88,7 @@ function drawTiles() {
     x = xFirst + (tileWidth + colGap) * ((i - 1) % tileColumn);
     y = yFirst + (tileHeight + colGap) * Math.floor((i - 1) / tileColumn);
     this.levelTiles[i] = new LevelTile(ctx, tileStatus, x, y, i, lvStars[i]);
-    this.levelTiles[i].draw();
+    this.levelTiles[i].draw(this.images);
   }
 }
 

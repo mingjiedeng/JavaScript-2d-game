@@ -294,9 +294,8 @@ class LevelTile extends RectZone {
     this.star = star;
   }
 
-  draw() {
+  draw(imgs) {
     const ctx = this.ctx;
-    const imgs = config.imgSources;
 
     //Draw the tile
     ctx.save();
