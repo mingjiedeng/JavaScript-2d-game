@@ -311,16 +311,15 @@ class LevelTile extends RectZone {
     );
     let xFirst = Math.floor((this.width - starWidth * 3) / 2);
     let yFirst = Math.ceil((this.height / 2 - starWidth) / 2 + this.height / 2);
-    let img = new Image();
-    let x, y;
+    let x, y, img;
     for (let i = 1; i <= 3; i++) {
-      img.src = i <= this.star ? imgs.starLight : imgs.starDark;
+      img = i <= this.star ? imgs.starLight : imgs.starDark;
       x = xFirst + starWidth * (i - 1);
       y = yFirst;
       ctx.drawImage(img, x, y, starWidth, starWidth);
     }
     if (this.status == "locked") {
-      img.src = imgs.levelLock;
+      img = imgs.levelLock;
       ctx.drawImage(
         img,
         this.width * 0.3,
